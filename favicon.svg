@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16b99f"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#123b67" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <!-- Background squircle: Clean white with subtle border so it pops on dark and light browser tabs -->
+  <rect width="256" height="256" rx="58" fill="#ffffff" filter="url(#softShadow)"/>
+  <rect x="2" y="2" width="252" height="252" rx="56" fill="none" stroke="#e2ece9" stroke-width="4"/>
+  
+  <!-- Centered Insurance Mentors Brand Emblem -->
+  <g transform="translate(40, 52) scale(0.7857)">
+    <g transform="translate(-39, -9)">
+      <!-- Navy Mentor Figure -->
+      <circle cx="72" cy="34" r="25" fill="#123b67"/>
+      <path d="M47 70c13 0 25 5 35 16l39 40c10 10 25 10 35 0l46-46c10-10 22-15 35-15v91h-43v-28l-34 34c-15 15-39 15-54 0L82 131v55H39V86c0-9 0-16 8-16z" fill="#123b67"/>
+      <!-- Teal Advisor Figure -->
+      <circle cx="238" cy="34" r="25" fill="url(#tealGrad)"/>
+      <path d="M178 112l38-39c10-10 22-16 35-16v129h-43v-54l-32 32c-16 16-41 16-57 0l-33-33 31-31 35 35c7 7 18 7 26 0z" fill="url(#tealGrad)"/>
+    </g>
+  </g>
+</svg>
