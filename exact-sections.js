@@ -74,15 +74,35 @@ if (adviceLink) {
 }
 if (currentPath.endsWith('index.html') || currentPath.endsWith('/')) {
   const heroTitle = document.querySelector('.hero h1');
-  if (heroTitle) heroTitle.innerHTML = 'Insurance choices,<br><em>made for real life.</em>';
-  const heroText = document.querySelector('.hero-copy > p');
-  if (heroText) heroText.textContent = 'Clear, personal guidance for health and term insurance—so you can understand your options and protect what matters.';
+  if (heroTitle) {
+    heroTitle.innerHTML = 'Your Family Deserves More Than<br><em>Just an Insurance Policy.</em>';
+  }
+  
+  let heroStandby = document.querySelector('.hero-standby');
+  if (!heroStandby && heroTitle) {
+    heroStandby = document.createElement('p');
+    heroStandby.className = 'hero-standby';
+    heroTitle.after(heroStandby);
+  }
+  if (heroStandby) {
+    heroStandby.textContent = 'They Deserve Someone Who Stands By Them.';
+  }
+
+  const heroText = document.querySelector('.hero-copy > p:not(.hero-standby)');
+  if (heroText) {
+    heroText.className = 'hero-description';
+    heroText.textContent = "The right insurance isn't just about paying premiums. It's about protecting your family's future and having someone to guide you when it matters most. We help you choose health and term insurance with clarity, confidence, and care.";
+  }
   const heroBadge = document.querySelector('.hero .badge');
   if (heroBadge) heroBadge.innerHTML = '<span class="badge-dot"></span> Independent insurance guidance';
   const heroActions = document.querySelector('.hero .actions');
   if (heroActions) {
-    heroActions.innerHTML = '<a class="btn btn-primary" href="contact.html">Review my insurance <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="compare.html">Explore plans</a>';
+    heroActions.innerHTML = '<a class="btn btn-primary" href="contact.html">Get Expert Guidance <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="#services">Explore Our Services</a>';
   }
+
+  document.querySelectorAll('.section').forEach(sec => {
+    if (sec.querySelector('.cards')) sec.id = 'services';
+  });
   document.querySelector('.hero')?.insertAdjacentHTML('beforeend', `
     <div class="hero-panel modern-hero-hub" aria-label="Insurance Mentors advisory overview">
       <div class="hero-hub-header">
