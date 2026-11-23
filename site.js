@@ -7,7 +7,156 @@ const home=()=>`<main><section class="hero"><div class="hero-copy"><div class="b
 const compare=()=>`<main><section class="page-hero"><p class="eyebrow">SIDE-BY-SIDE COMPARISON</p><h1>Compare Insurance Plans</h1><p>Find and compare the best insurance plans from India’s top companies. All data is updated regularly.</p></section><section class="compare-body"><div class="tabs"><button class="tab active" data-type="term">Term Insurance</button><button class="tab" data-type="health">Health Insurance</button><button class="tab" data-type="travel">Travel Insurance</button></div><h2 id="table-title"></h2><p id="table-note"></p><div class="table-wrap"><table><thead><tr><th>Company</th><th>Plan Name</th><th>Min Sum Assured</th><th>Max Age</th><th>CSR</th><th>Key Feature</th><th></th></tr></thead><tbody id="table-body"></tbody></table></div><p class="disclaimer">* Data is indicative and for comparison purposes only. Actual premiums and features may vary. Please consult our advisors for accurate quotes.</p></section>${cta('Not sure which plan is right for you?','Our advisors will analyse your needs and recommend the best plan — for free.','Get Personalised Advice')}</main>`;
 const about=()=>`<main><section class="page-hero"><p class="eyebrow">OUR STORY</p><h1>We’re Your<br><em>Insurance Mentors</em></h1><p>Born from a simple belief — every Indian family deserves honest, unbiased insurance guidance. We’ve been making that happen since 2014.</p></section><section class="section about-copy"><p class="eyebrow">WHO WE ARE</p><h2>We work for you, not the insurers</h2><p>InsuranceMentors.in was born from a simple belief — every Indian family deserves honest, unbiased insurance guidance. We’ve seen too many people buy wrong policies, pay excess premiums, or worse — face claim rejections. We’re here to change that.</p><p>With over 10 years of experience in the Indian insurance industry, our team of certified advisors has helped 500+ families across India find the right coverage. We work with all major insurance companies — but we work for you.</p><ul><li>Certified insurance advisors with 10+ years experience</li><li>Partnerships with 15+ major Indian insurance companies</li><li>End-to-end support from selection to claim settlement</li><li>Completely free advisory service — no hidden charges</li></ul></section><section class="section timeline"><p class="eyebrow">OUR JOURNEY</p><h2>A decade of protecting families</h2>${[['2014','Founded','InsuranceMentors.in was born with a mission to simplify insurance for Indian families.'],['2016','Growing Partnerships','Partnered with 10+ major insurance companies across Term, Health and Travel segments.'],['2018','100+ Families','Helped 100+ families find the right coverage. Expanded advisory to health and travel insurance.'],['2020','Digital Advisory','Launched digital advisory services during COVID — helping families stay protected remotely.'],['2022','300+ Families','300+ families protected across 15 states. Expanded our team of certified advisors.'],['2024','500+ and Counting','500+ families protected pan-India. Continuing to grow with the same personal touch.']].map(x=>`<article><b>${x[0]}</b><h3>${x[1]}</h3><p>${x[2]}</p></article>`).join('')}</section><section class="section values"><p class="eyebrow">WHAT WE STAND FOR</p><h2>Our Core Values</h2><div class="cards"><article><h3>Honesty First</h3><p>We never recommend a plan that doesn’t genuinely suit your needs. Our advice is based on your situation, not our commission.</p></article><article><h3>Financial Protection</h3><p>We help you build a financial safety net so your family can stay secure through unexpected events.</p></article><article><h3>Your Interests, Always</h3><p>We’re compensated by insurers, but we work for you. There’s no conflict of interest — your best plan is always our priority.</p></article><article><h3>Simplicity</h3><p>Insurance can be confusing. We make it simple — plain language, clear comparisons, and no jargon.</p></article></div></section>${cta('Ready to find your perfect plan?','Let our expert advisors guide you to the right insurance — for free.','Get Free Consultation')}</main>`;
 const contact=()=>`<main><section class="page-hero"><p class="eyebrow">FREE CONSULTATION</p><h1>Let’s Find Your<br><em>Perfect Plan</em></h1><p>Share your details and we’ll get back to you with personalised insurance recommendations — completely free.</p></section><section class="section contact"><form class="form" id="contact-form"><h2>Tell us about yourself</h2><div class="form-grid"><label>Full Name *<input required name="name"></label><label>Age *<input required name="age" type="number"></label><label>City / Place *<input required name="place"></label><label>Pincode *<input required name="pincode" type="text" inputmode="numeric" maxlength="6" pattern="[0-9]{6}"></label><label>Where do you find us? *<select required name="source"><option value="">Select an option</option><option>Social Media</option><option>Google</option><option>Friend/Family</option><option>QR Code</option></select></label><label>Insurance Type of Interest *<select required name="type"><option value="">Select insurance type</option><option>Term Insurance</option><option>Health Insurance</option><option>Travel Insurance</option><option>Not Sure — Help me decide</option></select></label><label>Mobile Number *<input required name="mobile" type="tel" inputmode="numeric" maxlength="12" pattern="[0-9]{10,12}"></label><label>Your Query (optional)<textarea name="query"></textarea></label></div><button class="btn btn-primary" type="submit">Send via WhatsApp</button><div id="success" class="success">Message ready. <a id="wa" target="_blank">Open WhatsApp</a> or <a id="email">email us at insurancementors.support@gmail.com</a>.</div><p>Or email us at <a href="mailto:insurancementors.support@gmail.com">insurancementors.support@gmail.com</a></p></form><div class="contact-info"><h2>Get in Touch</h2><p>We’re here to help. Reach out via WhatsApp or email.</p><b>WhatsApp<br>+91 8125252378<small>Responds within 2 hours</small></b><b>Email<br>insurancementors.support@gmail.com</b><b>Office Hours<br>Mon – Sat<br>9:00 AM – 7:00 PM</b><h3>What happens next?</h3><ol><li>We review your requirements</li><li>Our advisor calls you back</li><li>We compare plans for you</li><li>You choose the best fit</li></ol></div></section></main>`;
-const route=location.pathname.toLowerCase();const page=route.includes('compare')?'compare':route.includes('testimonial')?'testimonials':route.includes('about')?'about':route.includes('contact')?'contact':'home';document.body.innerHTML=`<div class="site">${nav(page)}${page==='home'?home():page==='compare'?compare():page==='about'?about():page==='testimonials'?`<main><section class="page-hero"><p class="eyebrow">HONESTY FIRST</p><h1>Real stories.<br><em>Coming soon.</em></h1><p>We’re gathering genuine feedback from real clients. Until then, this page is enjoying a little tea break. No made-up stars, no fictional plot twists.</p></section><section class="section reviews"><h2>Our review wall is still drying</h2><p>The real stories will be worth the wait. We promise not to give ourselves five stars in the meantime.</p></section>${cta('Have a real insurance question?','Our advisors are here to help with honest, personal guidance — no review required.','Get Free Advice')}</main>`:contact()}${footer}<a class="whatsapp" href="https://wa.me/918125252378" target="_blank">Chat with us</a></div>`;
+const testimonials=()=>`<main>
+  <section class="page-hero">
+    <div class="badge"><span class="badge-dot"></span> Real Client Experiences</div>
+    <p class="eyebrow">VERIFIED REVIEWS & STORIES</p>
+    <h1>Trusted by Professionals.<br><em>Valued by Families.</em></h1>
+    <p>Read authentic feedback from working professionals and families across India who partnered with Insurance Mentors for transparent, personalized protection guidance.</p>
+    <div class="trust-metrics-strip">
+      <div class="metric-item">
+        <strong>5.0 ★★★★★</strong>
+        <span>Client Rating</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-item">
+        <strong>1,100+</strong>
+        <span>Families Guided</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-item">
+        <strong>100%</strong>
+        <span>Unbiased Advice</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-item">
+        <strong>Zero Cost</strong>
+        <span>Free Advisory</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials-section">
+    <div class="center">
+      <p class="eyebrow">AUTHENTIC FEEDBACK</p>
+      <h2>What Our Clients Say</h2>
+      <p>Direct experiences from IT leaders, senior managers, and corporate professionals.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Review 1: Uday Vangala -->
+      <article class="testimonial-card">
+        <div class="card-top">
+          <div class="stars">★★★★★</div>
+          <span class="review-tag">Personal vs Online Advisor</span>
+        </div>
+        <blockquote class="testimonial-quote">
+          “Superb work bro, much much appreciated. I got to know the value of an advisor because of you. Now I understood the difference of personal advisor vs online advisor. Happy to recommend you and your team to my family and friends.”
+        </blockquote>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">UV</div>
+          <div class="reviewer-info">
+            <h3>Uday Vangala</h3>
+            <p class="reviewer-role">Team Leader</p>
+            <span class="reviewer-company">Blue Yonder Group, Inc</span>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </article>
+
+      <!-- Review 2: Siva Krishna -->
+      <article class="testimonial-card">
+        <div class="card-top">
+          <div class="stars">★★★★★</div>
+          <span class="review-tag">Term Insurance Process</span>
+        </div>
+        <blockquote class="testimonial-quote">
+          “Good service throughout from policy starting to policy issuance including medicals and documentation in term insurance process. 5 star rating.”
+        </blockquote>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">SK</div>
+          <div class="reviewer-info">
+            <h3>Siva Krishna</h3>
+            <p class="reviewer-role">Senior Project Manager</p>
+            <span class="reviewer-company">Wipro</span>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </article>
+
+      <!-- Review 3: Naresh Kunala -->
+      <article class="testimonial-card detailed-card">
+        <div class="card-top">
+          <div class="stars">★★★★★</div>
+          <span class="review-tag">Debt & Loan Protection</span>
+        </div>
+        <blockquote class="testimonial-quote">
+          “In my quest for the right protection plan, I was fortunate to connect with a life insurance advisor based in Bangalore. As a software professional, navigating the intricacies of insurance seemed daunting, especially after taking a loan. However, the advisor's assistance proved to be a game-changer.
+          <br><br>
+          Their deep understanding of my financial landscape, coupled with a keen awareness of the uncertainties in the software industry, allowed them to craft a protection plan that not only covered the loan but also provided a safety net for my family. What stood out was the advisor's commitment to ensuring my loved ones were shielded from unforeseen situations. The advisor's ability to translate complex insurance terms into clear, understandable concepts made the entire process seamless and enlightening.”
+        </blockquote>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">NK</div>
+          <div class="reviewer-info">
+            <h3>Naresh Kunala</h3>
+            <p class="reviewer-role">Senior Analyst</p>
+            <span class="reviewer-company">Software Professional • Bangalore</span>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </article>
+
+      <!-- Review 4: Gopala Krishna -->
+      <article class="testimonial-card detailed-card">
+        <div class="card-top">
+          <div class="stars">★★★★★</div>
+          <span class="review-tag">Personalized Planning</span>
+        </div>
+        <blockquote class="testimonial-quote">
+          “As a private sector employee in Delhi, I recently sought the expertise of a life insurance advisor to navigate the complexities of selecting a term insurance plan. The advisor’s approach was highly personalized, taking the time to understand my specific needs and responsibilities.
+          <br><br>
+          Their detailed explanations and transparency in breaking down complex terms made the decision-making process remarkably clear. I felt empowered to make an informed choice that aligns with my long-term financial goals. The advisor's responsiveness and commitment to customer satisfaction further enhanced the overall experience. I highly recommend their services to fellow professionals seeking reliable assistance in choosing the best term insurance plan.”
+        </blockquote>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">GK</div>
+          <div class="reviewer-info">
+            <h3>Gopala Krishna</h3>
+            <p class="reviewer-role">HR Professional</p>
+            <span class="reviewer-company">Apollo Tyres • Delhi</span>
+          </div>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Advisory Pillars Section -->
+  <section class="section advisory-pillars">
+    <div class="center">
+      <p class="eyebrow">THE ADVISORY ADVANTAGE</p>
+      <h2>Why Professionals Choose Insurance Mentors</h2>
+      <p>The difference between an automated algorithm and an advisor who stands by your family.</p>
+    </div>
+    <div class="cards">
+      <article>
+        <h3>Personalized Assessment</h3>
+        <p>We analyze your active loans, software industry stability, family dependency, and financial horizon before recommending any plan.</p>
+      </article>
+      <article>
+        <h3>End-to-End Handholding</h3>
+        <p>From tele-underwriting, medical tests coordination, and document filing to policy issuance, we manage the entire process.</p>
+      </article>
+      <article>
+        <h3>Claims Assistance for Life</h3>
+        <p>When claims happen, your family won't have to deal with automated call centers alone. We stand by them to ensure claims are settled smoothly.</p>
+      </article>
+    </div>
+  </section>
+
+  ${cta('Ready to Experience Personal Insurance Guidance?', 'Connect with our advisors today for a zero-spam, comprehensive review of your protection portfolio.', 'Get Free Expert Advice')}
+</main>`;
+
+const route=location.pathname.toLowerCase();const page=route.includes('compare')?'compare':route.includes('testimonial')?'testimonials':route.includes('about')?'about':route.includes('contact')?'contact':'home';document.body.innerHTML=`<div class="site">${nav(page)}${page==='home'?home():page==='compare'?compare():page==='about'?about():page==='testimonials'?testimonials():contact()}${footer}<a class="whatsapp" href="https://wa.me/918125252378" target="_blank">Chat with us</a></div>`;
 document.querySelector('.menu')?.addEventListener('click',()=>document.querySelector('.nav').classList.toggle('open'));document.querySelector('input[name="pincode"]')?.addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,6)});document.querySelector('input[name="mobile"]')?.addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,12)});const renderTable=type=>{const d=comparisonData[type];document.querySelector('#table-title').textContent=d.title;document.querySelector('#table-note').textContent=d.note;document.querySelector('#table-body').innerHTML=d.rows.map(r=>`<tr><td><b>${r[0]}</b><small>${r[1]}</small></td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td><strong>${r[5]}</strong></td><td>${r[6]}</td><td><a href="contact.html">Get Quote</a></td></tr>`).join('');document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.type===type))};if(document.querySelector('#table-title')){renderTable('term');document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>renderTable(b.dataset.type)))}
 document.querySelector('#contact-form')?.addEventListener('submit', e => {
   e.preventDefault();

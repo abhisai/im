@@ -1148,7 +1148,7 @@ h2 em {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* ── Reviews ───────────────────────────────────────────────── */
+/* ── Reviews & Testimonials ────────────────────────────────── */
 .reviews { max-width: 1100px; margin-left: auto; margin-right: auto; }
 .reviews > h2 {
   text-align: center;
@@ -1176,6 +1176,203 @@ h2 em {
 }
 .review-grid h3 { font-size: 15px; margin-bottom: 4px; color: var(--navy); }
 .review-grid em { font-size: 11px; color: var(--teal-dark); font-style: normal; }
+
+/* ── Modern Testimonials Experience ────────────────────────── */
+.testimonials-section {
+  padding-top: 10px;
+}
+
+.trust-metrics-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 12px 28px;
+  margin: 32px auto 0;
+  width: fit-content;
+  max-width: 100%;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.metric-item strong {
+  font-family: var(--heading-font);
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.metric-item span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.metric-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--line);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1140px;
+  margin: 40px auto 0;
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: #cde6df;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.review-tag {
+  font: 700 11px/1 var(--heading-font);
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--mint-light);
+  color: var(--teal-dark);
+  border: 1px solid #c2ebe0;
+  letter-spacing: 0.3px;
+}
+
+.testimonial-quote {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0 0 24px;
+  flex: 1;
+  font-style: normal;
+}
+
+.detailed-card .testimonial-quote {
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.reviewer-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-light);
+}
+
+.reviewer-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font: 800 14px/1 var(--heading-font);
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(18, 59, 103, 0.15);
+}
+
+.reviewer-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.reviewer-info h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 2px;
+}
+
+.reviewer-role {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.reviewer-company {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-top: 2px;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font: 700 11px/1 var(--heading-font);
+  color: #0d795f;
+  background: #e6f9f2;
+  border: 1px solid #bcefdc;
+  padding: 4px 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.advisory-pillars {
+  background: #f7faf9;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: 40px;
+}
+
+.advisory-pillars .cards {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-metrics-strip {
+    border-radius: 16px;
+    gap: 16px;
+    padding: 16px;
+  }
+  .metric-divider {
+    display: none;
+  }
+}
 
 /* ── Compare Page ──────────────────────────────────────────── */
 .compare-body {
