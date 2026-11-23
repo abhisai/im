@@ -12,16 +12,10 @@ const testimonials=()=>`<main>
     <div class="badge"><span class="badge-dot"></span> Real Client Experiences</div>
     <p class="eyebrow">VERIFIED REVIEWS & STORIES</p>
     <h1>Trusted by Professionals.<br><em>Valued by Families.</em></h1>
-    <p>Read authentic feedback from working professionals and families across India who partnered with Insurance Mentors for transparent, personalized protection guidance.</p>
     <div class="trust-metrics-strip">
       <div class="metric-item">
-        <strong>5.0 ★★★★★</strong>
-        <span>Client Rating</span>
-      </div>
-      <div class="metric-divider"></div>
-      <div class="metric-item">
-        <strong>1,100+</strong>
-        <span>Families Guided</span>
+        <strong>Zero Cost</strong>
+        <span>Free Advisory</span>
       </div>
       <div class="metric-divider"></div>
       <div class="metric-item">
@@ -30,8 +24,13 @@ const testimonials=()=>`<main>
       </div>
       <div class="metric-divider"></div>
       <div class="metric-item">
-        <strong>Zero Cost</strong>
-        <span>Free Advisory</span>
+        <strong>1,100+</strong>
+        <span>Families Guided</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-item">
+        <strong>Zero Pressure</strong>
+        <span>Only What You Need</span>
       </div>
     </div>
   </section>
@@ -40,7 +39,6 @@ const testimonials=()=>`<main>
     <div class="center">
       <p class="eyebrow">AUTHENTIC FEEDBACK</p>
       <h2>What Our Clients Say</h2>
-      <p>Direct experiences from IT leaders, senior managers, and corporate professionals.</p>
     </div>
 
     <div class="testimonials-grid">
@@ -48,7 +46,6 @@ const testimonials=()=>`<main>
       <article class="testimonial-card">
         <div class="card-top">
           <div class="stars">★★★★★</div>
-          <span class="review-tag">Personal vs Online Advisor</span>
         </div>
         <blockquote class="testimonial-quote">
           “Superb work bro, much much appreciated. I got to know the value of an advisor because of you. Now I understood the difference of personal advisor vs online advisor. Happy to recommend you and your team to my family and friends.”
@@ -68,7 +65,6 @@ const testimonials=()=>`<main>
       <article class="testimonial-card">
         <div class="card-top">
           <div class="stars">★★★★★</div>
-          <span class="review-tag">Term Insurance Process</span>
         </div>
         <blockquote class="testimonial-quote">
           “Good service throughout from policy starting to policy issuance including medicals and documentation in term insurance process. 5 star rating.”
@@ -88,7 +84,6 @@ const testimonials=()=>`<main>
       <article class="testimonial-card detailed-card">
         <div class="card-top">
           <div class="stars">★★★★★</div>
-          <span class="review-tag">Debt & Loan Protection</span>
         </div>
         <blockquote class="testimonial-quote">
           “In my quest for the right protection plan, I was fortunate to connect with a life insurance advisor based in Bangalore. As a software professional, navigating the intricacies of insurance seemed daunting, especially after taking a loan. However, the advisor's assistance proved to be a game-changer.
@@ -110,7 +105,6 @@ const testimonials=()=>`<main>
       <article class="testimonial-card detailed-card">
         <div class="card-top">
           <div class="stars">★★★★★</div>
-          <span class="review-tag">Personalized Planning</span>
         </div>
         <blockquote class="testimonial-quote">
           “As a private sector employee in Delhi, I recently sought the expertise of a life insurance advisor to navigate the complexities of selecting a term insurance plan. The advisor’s approach was highly personalized, taking the time to understand my specific needs and responsibilities.
